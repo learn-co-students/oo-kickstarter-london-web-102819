@@ -13,9 +13,11 @@ class Project
  
 
     def add_backer(backer)
-
+            check= @backers.any?{|el| el==backer}
+            if check ==false
              @backers << backer
             backer.backed_projects<<self
+            end 
         
 
     end
